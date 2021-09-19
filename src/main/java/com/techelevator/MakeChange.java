@@ -20,14 +20,24 @@ public class MakeChange {
 		System.out.println("Welcome to the Change Calculator");
 
 		System.out.print("Enter the bill amount (without $): ");
-		String line = scanner.nextLine();
 
-		double bill = Double.parseDouble(line);
 		while(true) {
-			boolean validInput = (bill == int);
+			String line = scanner.nextLine();
+			double bill = Double.parseDouble(line);
+			boolean validInput = (bill > 0);
 			if (!validInput) {
-				System.out.println("Please enter either M or F.");
-			}else {
+				System.out.println("Please enter either valid number without any symbols or negatives.");
+			} else {
+				System.out.print("Please provide amount tendered(without $): ");
+
+				line = scanner.nextLine();
+
+				double tendered = Double.parseDouble(line);
+
+
+				double changeRequired = tendered - bill;
+
+				System.out.println("The change required is $"+ changeRequired);
 
 				break;
 			}
@@ -36,16 +46,7 @@ public class MakeChange {
 
 
 		// Prompt the user for a series of prices
-		System.out.print("Please provide amount tendered(without $): ");
 
-		line = scanner.nextLine();
-
-		double tendered = Double.parseDouble(line);
-
-
-		double changeRequired = tendered - bill;
-
-		System.out.println("The change required is $"+ changeRequired);
 
 	}
 
