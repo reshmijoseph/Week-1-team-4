@@ -17,7 +17,7 @@ public class MakeChange {
 
 			Scanner scanner = new Scanner(System.in);
 
-				System.out.println("Welcome to the Discount Calculator");
+				System.out.println("Welcome to the apple Calculator");
 
 				// Prompt the user for a discount amount
 				// The answer needs to be saved as a double
