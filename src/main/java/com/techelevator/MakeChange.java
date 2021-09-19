@@ -15,35 +15,28 @@ public class MakeChange {
 
 	public static void main(String[] args) {
 
-			Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
-				System.out.println("Welcome to the apple Calculator");
+			System.out.println("Welcome to the Change Calculator");
 
-				// Prompt the user for a discount amount
-				// The answer needs to be saved as a double
-				System.out.print("Enter the discount amount (0 - 1.0) (w/out percentage): ");
+			System.out.print("Enter the bill amount (without $): ");
 
-				String line = scanner.nextLine();
+			String line = scanner.nextLine();
 
-				double discount = Double.parseDouble(line);
+			double bill = Double.parseDouble(line);
 
-				// Prompt the user for a series of prices
-				System.out.print("Please provide a series of prices (space separated): ");
+			// Prompt the user for a series of prices
+			System.out.print("Please provide amount tendered(without $): ");
 
-				line = scanner.nextLine();
+			line = scanner.nextLine();
 
-				String[] pricesAsText = line.split( " ");
+			double tendered = Double.parseDouble(line);
 
 
-				for (String priceText : pricesAsText){
-					double price = Double.parseDouble(priceText);
+			double changeRequired = tendered - bill;
 
-					double discountedPrice = price - (price * discount);
+			System.out.println("The change required is $"+ changeRequired);
 
-					System.out.println("The new price: "+ discountedPrice);
-				}
-
-			}
 
 
 
