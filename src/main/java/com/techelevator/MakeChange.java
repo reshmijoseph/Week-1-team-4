@@ -24,29 +24,29 @@ public class MakeChange {
 		while(true) {
 			String line = scanner.nextLine();
 			double bill = Double.parseDouble(line);
-			boolean validInput = (bill > 0);
-			if (!validInput) {
+			boolean validBillInput = (bill > 0);
+			//add requirement that input cannot have anything other than number(double)
+			if (!validBillInput) {
 				System.out.println("Please enter either valid number without any symbols or negatives.");
 			} else {
 				System.out.print("Please provide amount tendered(without $): ");
+				while(true) {
+					line = scanner.nextLine();
+					double tendered = Double.parseDouble(line);
+					boolean validTenderedInput = (tendered > 0);
+					//add requirement that input cannot have anything other than number(double)
+					if (!validTenderedInput) {
+						System.out.println("Please enter either valid number without any symbols or negatives.");
+					} else {
 
-				line = scanner.nextLine();
+						double changeRequired = tendered - bill;
 
-				double tendered = Double.parseDouble(line);
-
-
-				double changeRequired = tendered - bill;
-
-				System.out.println("The change required is $"+ changeRequired);
-
-				break;
+						System.out.println("The change required is $" + changeRequired);
+					}
+					break;
+				}
 			}
 		}
-
-
-
-		// Prompt the user for a series of prices
-
 
 	}
 
