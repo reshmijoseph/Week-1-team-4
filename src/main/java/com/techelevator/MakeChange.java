@@ -27,7 +27,7 @@ public class MakeChange {
 			boolean validBillInput = (bill > 0);
 			//add requirement that input cannot have anything other than number(double)
 			if (!validBillInput) {
-				System.out.println("Please enter either valid number without any symbols or negatives.");
+				System.out.println("Negatives are not valid. Please enter the bill amount (without $)");
 			} else {
 				System.out.print("Please provide amount tendered(without $): ");
 				while(true) {
@@ -36,7 +36,7 @@ public class MakeChange {
 					boolean validTenderedInput = (tendered > 0);
 					//add requirement that input cannot have anything other than number(double)
 					if (!validTenderedInput) {
-						System.out.println("Please enter either valid number without any symbols or negatives.");
+						System.out.println("Negatives are not valid. Please enter the bill amount (without $)");
 					} else {
 
 						double changeRequired = tendered - bill;
