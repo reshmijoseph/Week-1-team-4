@@ -22,7 +22,6 @@ public class MartianWeight {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner (System.in);
-		//var      name      new Scanner    system input from user
 
 		System.out.println("Welcome to the Martian Calculator");
 
@@ -33,7 +32,6 @@ public class MartianWeight {
 
 		String[] weightAsText = line.split(" ");
 
-		//next is a for loop something like
 
 		for (String weightText : weightAsText) {
 			double earthWeight = Double.parseDouble(weightText);
