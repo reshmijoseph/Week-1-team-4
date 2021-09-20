@@ -6,25 +6,25 @@ import java.util.Scanner;
 public class DecimalToBinary {
 
 	public static void main(String[] args) {
-		Scanner input =new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 
 		System.out.println("Please enter in a series of decimal values (separated by spaces): ");
 
 		String userInput = input.nextLine();
 
-		String[] decimalToBinary = userInput.split(" ");
+		String[] decimalAsNumber = userInput.split(" ");
+		int binary;
 
-		for (String weightText : decimalToBinary) {
-			int arrayNumber = Integer.parseInt(weightText);
+		for(String decimalNumber : decimalAsNumber){
+			int decimal = Integer.parseInt(decimalNumber);
+			do{
+				binary = decimal % (decimal / 2);
+				decimal = decimal / 2;
+				System.out.print(binary + ",");
+			}
 
-			int binary = arrayNumber % (arrayNumber / 2);
-
-			System.out.println(arrayNumber + " in binary is " + binary);
-
-		System.out.println(Arrays.toString(decimalToBinary));
-
-
-	}
+			while(decimal >= 0);
+		}
 
 }
 }
