@@ -13,16 +13,18 @@ public class DecimalToBinary {
 		String userInput = input.nextLine();
 
 		String[] decimalToBinary = userInput.split(" ");
-		int
 
+		for (String weightText : decimalToBinary) {
+			int arrayNumber = Integer.parseInt(weightText);
 
-		for(int i = 0; i < decimalToBinary.length - 1; i++){
-			decimalToBinary[i]
-		}
+			int binary = arrayNumber % (arrayNumber / 2);
+
+			System.out.println(arrayNumber + " in binary is " + binary);
 
 		System.out.println(Arrays.toString(decimalToBinary));
 
 
 	}
 
+}
 }
