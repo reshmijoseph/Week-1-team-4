@@ -23,7 +23,8 @@ public class DecimalToBinary {
 				System.out.print(binary + ",");
 			}
 
-			while(decimal >= 0);
+			while(decimal > 1);
+			
 		}
 
 }
