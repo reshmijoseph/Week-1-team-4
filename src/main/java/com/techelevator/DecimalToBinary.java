@@ -17,14 +17,17 @@ public class DecimalToBinary {
 
 		for(String decimalNumber : decimalAsNumber){
 			int decimal = Integer.parseInt(decimalNumber);
+			System.out.print(decimal + " in binary is ");
 			do{
 				binary = decimal % (decimal / 2);
-				decimal = decimal / 2;
 				System.out.print(binary + ",");
+				decimal = decimal / 2;
 			}
 
-			while(decimal > 1);
-			
+			while(decimal > 1);{
+				break;
+			}
+
 		}
 
 }
