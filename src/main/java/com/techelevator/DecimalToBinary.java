@@ -19,7 +19,7 @@ public class DecimalToBinary {
 
 		for(String decimalNumber : decimalAsNumber){
 			int decimal = Integer.parseInt(decimalNumber);
-			System.out.print(" " + decimal + " in binary is ");
+			System.out.print("\r\n"+ decimal + " in binary is ");
 
 			while(decimal > 0) {
 				binary[i] = decimal % 2;
@@ -27,8 +27,9 @@ public class DecimalToBinary {
 				decimal = decimal / 2;
 				i++;
 
-				for (x = i - 1; x >= 0; x--)
+				for (x = i - 1; x >= 0; x--) {
 					System.out.print(binary[x]);
+				}
 			}
 		}
 	}
